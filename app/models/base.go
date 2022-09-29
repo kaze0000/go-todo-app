@@ -26,7 +26,7 @@ func init() {
 		log.Fatalln(err)
 	}
 	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-		if INTEGER PRIMARY KEY AUTOINCREMENT,
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		uuid STRING NOT NULL UNIQUE,
 		name STRING,
 		email STRING,
