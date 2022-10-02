@@ -1,6 +1,7 @@
 package models
 
 import (
+	"fmt"
 	"log"
 	"time"
 )
@@ -55,5 +56,27 @@ func GetTodos() (todos []Todo, err error) {
 		todos = append(todos, todo)
 	}
 	rows.Close()
+	return todos, err
+}
+
+func (u *User) GetoTodoByUser() (todos []Todo, err error) {
+	cmd := `select * from todos where user_id = ?`
+	rows, err := Db.Query(cmd, u.ID)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	for rows.Next() {
+		var todo Todo
+		err = rows.Scan(&todo.ID,
+										&todo.Content,
+										&todo.UserID,
+										&todo.CreatedAt,)
+		if err != nil {
+			fmt.Println(err) //log.Fatallnはos.Exitしていて、アプリケーションが終わってしまうので、あまり使わない
+		}
+		todos = append(todos, todo)
+	}
+	rows.Close()
+
 	return todos, err
 }
