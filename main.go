@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"todo_app/app/controllers"
 	"todo_app/app/models"
 )
 
@@ -64,6 +65,7 @@ func main(){
 	}
 	*/
 
+	/*
 	user2, _ := models.GetUser(2)
 	todos, _ := user2.GetoTodoByUser()
 
@@ -74,4 +76,7 @@ func main(){
 	t, _ := models.GetTodo(1)
 	t.Content = "Update Todo"
 	t.UpdateTodo()
+	*/
+
+	controllers.StartMainServer()
 }
