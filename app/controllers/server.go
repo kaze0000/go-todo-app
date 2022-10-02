@@ -22,5 +22,6 @@ func StartMainServer() error {
 	http.Handle("/static/", http.StripPrefix("/static/", files))
 
 	http.HandleFunc("/", top) //topというハンドラーの処理を実行(route_main.go)
+	http.HandleFunc("/signup", signup)
 	return http.ListenAndServe(":" + config.Config.Port, nil)
 }

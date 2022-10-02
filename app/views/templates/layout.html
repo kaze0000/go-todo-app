@@ -8,10 +8,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Document</title>
+    <title>Sample App</title>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/form.css" />
   </head>
   <body>
+    {{ template "navbar"}}
     <div class="container text-center">{{template "content" . }}</div>
     <!-- {{template "content" . }}の.はデータを渡している("hello")  -->
   </body>
