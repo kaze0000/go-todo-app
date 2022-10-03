@@ -29,17 +29,21 @@ func main(){
 	*/
 
 	/*
-	u, _ := models.GetUser(1)
+	u, _ := models.GetUser(2)
 	log.Println(u)
+	*/
 
+	/*
 	u.Name = "Test2"
 	u.Email = "test2@example.com"
 	u.UpdateUser()
 	u, _ = models.GetUser(1)
 	log.Println(u)
+	*/
 
+	/*
 	u.DeleteUser()
-	u, _ = models.GetUser(1)
+	u, _ = models.GetUser(2)
 	log.Println(u)
 	*/
 
@@ -79,4 +83,18 @@ func main(){
 	*/
 
 	controllers.StartMainServer()
+
+	/*
+	user, _ := models.GetUserByEmail("test@example.com")
+	fmt.Println(user)
+
+	session, err := user.CreateSession()
+	if err != nil {
+		log.Println(err)
+	}
+	fmt.Println(session)
+
+	valid, _ := session.CheckSession()
+	fmt.Println(valid)
+	*/
 }

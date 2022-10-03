@@ -23,5 +23,7 @@ func StartMainServer() error {
 
 	http.HandleFunc("/", top) //topというハンドラーの処理を実行(route_main.go)
 	http.HandleFunc("/signup", signup)
+	http.HandleFunc("/login", login)
+	http.HandleFunc("/authenticate", authenticate)
 	return http.ListenAndServe(":" + config.Config.Port, nil)
 }

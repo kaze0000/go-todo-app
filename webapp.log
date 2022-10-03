@@ -1,3 +1,13 @@
 2022/09/28 10:26:22 main.go:15: test
 
 2022/10/01 18:16:04 users.go:61: near "delte": syntax error
+2022/10/03 21:34:33 main.go:88: sql: expected 5 destination arguments in Scan, not 4
+2022/10/03 22:20:53 main.go:34: {0     0001-01-01 00:00:00 +0000 UTC}
+2022/10/03 22:20:53 main.go:46: {0     0001-01-01 00:00:00 +0000 UTC}
+2022/10/03 22:23:46 main.go:27: &{0  test2 test2@example.com testtest 0001-01-01 00:00:00 +0000 UTC}
+2022/10/03 22:42:01 route_auth.go:44: 51abb9636078defbf888d8457a7c76f85c8f114c
+2022/10/03 22:42:37 route_auth.go:44: 51abb9636078defbf888d8457a7c76f85c8f114c
+2022/10/03 22:42:46 route_auth.go:44: 51abb9636078defbf888d8457a7c76f85c8f114c
+2022/10/03 22:42:46 route_auth.go:45: da39a3ee5e6b4b0d3255bfef95601890afd80709
+2022/10/03 22:43:16 route_auth.go:44: 51abb9636078defbf888d8457a7c76f85c8f114c
+2022/10/03 22:43:16 route_auth.go:45: 51abb9636078defbf888d8457a7c76f85c8f114c
