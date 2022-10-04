@@ -4,7 +4,7 @@ import (
 	"net/http"
 )
 
-func top(w http.ResponseWriter, _  *http.Request) { //ハンドラー
+func top(w http.ResponseWriter, r *http.Request) { //ハンドラー
 	/*
 	t, err := template.ParseFiles("app/views/templates/top.html")
 	if err != nil {
@@ -12,5 +12,19 @@ func top(w http.ResponseWriter, _  *http.Request) { //ハンドラー
 	}
 	t.Execute(w, "hello")
 	*/
-	generateHTML(w, "hello", "layout", "public_navbar","top")
+	_, err := session(w, r)
+	if err != nil { //ログインしていない
+		generateHTML(w, "hello", "layout", "public_navbar", "top")
+	} else {
+		http.Redirect(w, r, "/todos", http.StatusFound)
+	}
+}
+
+func index(w http.ResponseWriter, r *http.Request) {
+	_, err := session(w, r) //クッキーの取得
+	if err != nil {
+		http.Redirect(w, r, "/", http.StatusFound)
+	} else {
+		generateHTML(w, nil, "layout", "private_navbar", "index")
+	}
 }

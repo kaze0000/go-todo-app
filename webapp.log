@@ -11,3 +11,7 @@
 2022/10/03 22:42:46 route_auth.go:45: da39a3ee5e6b4b0d3255bfef95601890afd80709
 2022/10/03 22:43:16 route_auth.go:44: 51abb9636078defbf888d8457a7c76f85c8f114c
 2022/10/03 22:43:16 route_auth.go:45: 51abb9636078defbf888d8457a7c76f85c8f114c
+2022/10/04 21:16:22 route_main.go:27: http: named cookie not present
+2022/10/04 21:47:04 server.go:3197: http: superfluous response.WriteHeader call from todo_app/app/controllers.login (route_auth.go:39)
+2022/10/04 21:51:19 server.go:3197: http: superfluous response.WriteHeader call from todo_app/app/controllers.login (route_auth.go:39)
+2022/10/04 21:53:38 server.go:3197: http: superfluous response.WriteHeader call from todo_app/app/controllers.login (route_auth.go:39)
