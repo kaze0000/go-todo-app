@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"log"
 	"net/http"
 )
 
@@ -21,10 +22,16 @@ func top(w http.ResponseWriter, r *http.Request) { //ハンドラー
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	_, err := session(w, r) //クッキーの取得
+	sess, err := session(w, r) //クッキーと一致するsessionの取得
 	if err != nil {
 		http.Redirect(w, r, "/", http.StatusFound)
 	} else {
-		generateHTML(w, nil, "layout", "private_navbar", "index")
+		user, err := sess.GetUserBySession()
+		if err != nil {
+			log.Println(err)
+		}
+		todos, _ := user.GetoTodoByUser()
+		user.Todos = todos
+		generateHTML(w, user, "layout", "private_navbar", "index") //第２引数userはtemplateにわたすやつ
 	}
 }

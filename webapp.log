@@ -15,3 +15,421 @@
 2022/10/04 21:47:04 server.go:3197: http: superfluous response.WriteHeader call from todo_app/app/controllers.login (route_auth.go:39)
 2022/10/04 21:51:19 server.go:3197: http: superfluous response.WriteHeader call from todo_app/app/controllers.login (route_auth.go:39)
 2022/10/04 21:53:38 server.go:3197: http: superfluous response.WriteHeader call from todo_app/app/controllers.login (route_auth.go:39)
+2022/10/04 23:07:52 server.go:3197: http: panic serving [::1]:65495: template: index.html:15: unexpected EOF
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000099410})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc00011a0e0}, {0x44bfb40, 0xc000118600}, {0xc0000c5860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc00011a0e0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48f58?, {0x456dda0?, 0xc00011a0e0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc00011a0e0}, 0xc00010c200)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00007e030?}, {0x456dda0, 0xc00011a0e0}, 0xc00010c200)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b8e60, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:07:52 server.go:3197: http: panic serving [::1]:65496: template: index.html:15: unexpected EOF
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc0000120a0})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc00011a1c0}, {0x44bfb40, 0xc000118b80}, {0xc0000c3860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc00011a1c0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48e68?, {0x456dda0?, 0xc00011a1c0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc00011a1c0}, 0xc00010c100)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009b4a0?}, {0x456dda0, 0xc00011a1c0}, 0xc00010c100)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b8f00, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:07:52 server.go:3197: http: panic serving [::1]:65497: template: index.html:15: unexpected EOF
+goroutine 5 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000012490})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc0001b6000}, {0x44bfb40, 0xc000182400}, {0xc0000bf860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc0001b6000}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48e68?, {0x456dda0?, 0xc0001b6000?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc0001b6000}, 0xc00019c000)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00007e270?}, {0x456dda0, 0xc0001b6000}, 0xc00019c000)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00019a000, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:07:53 server.go:3197: http: panic serving [::1]:65498: template: index.html:15: unexpected EOF
+goroutine 10 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc0000124e0})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc00023e000}, {0x44bfb40, 0xc000252200}, {0xc00024d860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc00023e000}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48e68?, {0x456dda0?, 0xc00023e000?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc00023e000}, 0xc000214000)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00020a030?}, {0x456dda0, 0xc00023e000}, 0xc000214000)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00019a0a0, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:07:53 server.go:3197: http: panic serving [::1]:65499: template: index.html:15: unexpected EOF
+goroutine 11 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000012590})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc00011a2a0}, {0x44bfb40, 0xc000118e80}, {0xc0000c3860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc00011a2a0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48f58?, {0x456dda0?, 0xc00011a2a0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc00011a2a0}, 0xc00019c200)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00007eff0?}, {0x456dda0, 0xc00011a2a0}, 0xc00019c200)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00019a140, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:07:53 server.go:3197: http: panic serving [::1]:65500: template: index.html:15: unexpected EOF
+goroutine 12 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000099c20})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc0001b60e0}, {0x44bfb40, 0xc000182d80}, {0xc0000bf860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc0001b60e0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48f58?, {0x456dda0?, 0xc0001b60e0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc0001b60e0}, 0xc00019c300)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00007f410?}, {0x456dda0, 0xc0001b60e0}, 0xc00019c300)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00019a1e0, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:07:58 server.go:3197: http: panic serving [::1]:65501: template: index.html:15: unexpected EOF
+goroutine 51 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000308010})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc00011a380}, {0x44bfb40, 0xc000119500}, {0xc0000c3860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc00011a380}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48f58?, {0x456dda0?, 0xc00011a380?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc00011a380}, 0xc00019c500)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00007f8c0?}, {0x456dda0, 0xc00011a380}, 0xc00019c500)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b8fa0, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:07:58 server.go:3197: http: panic serving [::1]:65502: template: index.html:15: unexpected EOF
+goroutine 52 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000308310})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc00011a460}, {0x44bfb40, 0xc000119980}, {0xc0000c3860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc00011a460}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48e68?, {0x456dda0?, 0xc00011a460?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc00011a460}, 0xc00010c600)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000145dd0?}, {0x456dda0, 0xc00011a460}, 0xc00010c600)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9040, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:07:58 server.go:3197: http: panic serving [::1]:65503: template: index.html:15: unexpected EOF
+goroutine 59 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000012b70})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc0001b61c0}, {0x44bfb40, 0xc000183000}, {0xc0000c1860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc0001b61c0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48e68?, {0x456dda0?, 0xc0001b61c0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc0001b61c0}, 0xc00010ca00)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000303470?}, {0x456dda0, 0xc0001b61c0}, 0xc00010ca00)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b90e0, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:08:28 server.go:3197: http: panic serving [::1]:65506: template: index.html:15: unexpected EOF
+goroutine 84 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc00020e5f0})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc00011a540}, {0x44bfb40, 0xc000119f00}, {0xc0000c3860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc00011a540}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48e68?, {0x456dda0?, 0xc00011a540?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc00011a540}, 0xc00019c700)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000286600?}, {0x456dda0, 0xc00011a540}, 0xc00019c700)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00019a280, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:08:28 server.go:3197: http: panic serving [::1]:65507: template: index.html:15: unexpected EOF
+goroutine 60 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc00020e700})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc0001b62a0}, {0x44bfb40, 0xc000183500}, {0xc0000c1860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc0001b62a0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48f58?, {0x456dda0?, 0xc0001b62a0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc0001b62a0}, 0xc00010cb00)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000303530?}, {0x456dda0, 0xc0001b62a0}, 0xc00010cb00)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9180, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:08:28 server.go:3197: http: panic serving [::1]:65508: template: index.html:15: unexpected EOF
+goroutine 41 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc00020eaf0})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc00023e0e0}, {0x44bfb40, 0xc000252a80}, {0xc0000bf860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc00023e0e0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f48f58?, {0x456dda0?, 0xc00023e0e0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc00023e0e0}, 0xc000214200)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00020bb30?}, {0x456dda0, 0xc00023e0e0}, 0xc000214200)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00027a000, {0x456e028, 0xc00009b350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:09:03 server.go:3197: http: panic serving [::1]:65516: template: index.html:15: unexpected EOF
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc0001840a0})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc0000c4000}, {0x44bfb40, 0xc0000d2200}, {0xc00011d860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc0000c4000}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f867e8?, {0x456dda0?, 0xc0000c4000?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc0000c4000}, 0xc000160200)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000094030?}, {0x456dda0, 0xc0000c4000}, 0xc000160200)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000116f00, {0x456e028, 0xc00007f350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:09:03 server.go:3197: http: panic serving [::1]:65517: template: index.html:15: unexpected EOF
+goroutine 8 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000184480})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc0001da000}, {0x44bfb40, 0xc000194400}, {0xc000121860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc0001da000}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f866f8?, {0x456dda0?, 0xc0001da000?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc0001da000}, 0xc000160100)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00007f4a0?}, {0x456dda0, 0xc0001da000}, 0xc000160100)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000116fa0, {0x456e028, 0xc00007f350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:09:03 server.go:3197: http: panic serving [::1]:65518: template: index.html:15: unexpected EOF
+goroutine 38 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000184760})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc0001da0e0}, {0x44bfb40, 0xc000194a00}, {0xc000121860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc0001da0e0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f866f8?, {0x456dda0?, 0xc0001da0e0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc0001da0e0}, 0xc0001bc100)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000181050?}, {0x456dda0, 0xc0001da0e0}, 0xc0001bc100)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001f2000, {0x456e028, 0xc00007f350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:09:04 server.go:3197: http: panic serving [::1]:65519: template: index.html:15: unexpected EOF
+goroutine 41 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc0000136c0})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc00016c0e0}, {0x44bfb40, 0xc00016a680}, {0xc00011d860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc00016c0e0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f866f8?, {0x456dda0?, 0xc00016c0e0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc00016c0e0}, 0xc000160300)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00007fec0?}, {0x456dda0, 0xc00016c0e0}, 0xc000160300)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001f20a0, {0x456e028, 0xc00007f350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:09:04 server.go:3197: http: panic serving [::1]:65520: template: index.html:15: unexpected EOF
+goroutine 42 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000184b50})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc0001da1c0}, {0x44bfb40, 0xc000194f80}, {0xc000121860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc0001da1c0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f867e8?, {0x456dda0?, 0xc0001da1c0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc0001da1c0}, 0xc0001bc300)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000181a10?}, {0x456dda0, 0xc0001da1c0}, 0xc0001bc300)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001f2140, {0x456e028, 0xc00007f350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:09:04 server.go:3197: http: panic serving [::1]:65521: template: index.html:15: unexpected EOF
+goroutine 47 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000013700})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc0001da2a0}, {0x44bfb40, 0xc000195480}, {0xc000121860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc0001da2a0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f867e8?, {0x456dda0?, 0xc0001da2a0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc0001da2a0}, 0xc0001bc600)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000282750?}, {0x456dda0, 0xc0001da2a0}, 0xc0001bc600)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001f21e0, {0x456e028, 0xc00007f350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
+2022/10/04 23:09:09 server.go:3197: http: panic serving [::1]:65522: template: index.html:15: unexpected EOF
+goroutine 66 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4480900, 0xc000013b00})
+	/usr/local/Cellar/go/1.18.1/libexec/src/runtime/panic.go:844 +0x258
+text/template.Must(...)
+	/usr/local/Cellar/go/1.18.1/libexec/src/text/template/helper.go:25
+todo_app/app/controllers.generateHTML({0x456dda0?, 0xc00016c1c0}, {0x44bfb40, 0xc00016ad80}, {0xc00011d860?, 0x3, 0x11?})
+	/Users/kazuya/go/src/todo_app/app/controllers/server.go:17 +0x106
+todo_app/app/controllers.index({0x456dda0, 0xc00016c1c0}, 0x0?)
+	/Users/kazuya/go/src/todo_app/app/controllers/route_main.go:35 +0x325
+net/http.HandlerFunc.ServeHTTP(0x4f867e8?, {0x456dda0?, 0xc00016c1c0?}, 0x4011225?)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x456dda0, 0xc00016c1c0}, 0xc000160600)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000232d80?}, {0x456dda0, 0xc00016c1c0}, 0xc000160600)
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000117040, {0x456e028, 0xc00007f350})
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.1/libexec/src/net/http/server.go:3071 +0x4db
