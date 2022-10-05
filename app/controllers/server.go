@@ -3,6 +3,8 @@ package controllers
 import (
 	"fmt"
 	"net/http"
+	"regexp"
+	"strconv"
 	"text/template"
 	"todo_app/app/models"
 	"todo_app/config"
@@ -29,6 +31,25 @@ func session(_ http.ResponseWriter, r *http.Request) (sess models.Session, err e
 	return sess, err
 }
 
+var validPath = regexp.MustCompile("^/todos/(edit|update)/([0-9]+)$")
+
+func parseURL(fn func(http.ResponseWriter, *http.Request, int)) http.HandlerFunc { //handlerを関数を返す関数
+	return func(w http.ResponseWriter, r *http.Request) {
+		// /todos/edit/1のようなURLからidを受けとって処理する
+		q := validPath.FindStringSubmatch(r.URL.Path) // マッチした部分をスライスで取得する
+		if q == nil { //何もマッチしない場合
+			http.NotFound(w, r)
+			return
+		}
+		qi, err := strconv.Atoi(q[2]) //最後のパスをint型として受け取る
+		if err != nil {
+			http.NotFound(w, r)
+			return
+		}
+		fn(w, r, qi) //引数で渡したtodoEdit()を実行
+	}
+}
+
 func StartMainServer() error {
 	files := http.FileServer(http.Dir(config.Config.Static))
 	http.Handle("/static/", http.StripPrefix("/static/", files))
@@ -41,5 +62,7 @@ func StartMainServer() error {
 	http.HandleFunc("/todos", index)
 	http.HandleFunc("/todos/new", todoNew)
 	http.HandleFunc("/todos/save", todoSave)
+	http.HandleFunc("/todos/edit/", parseURL(todoEdit))
+	http.HandleFunc("/todos/update/", parseURL(todoUpdate))
 	return http.ListenAndServe(":" + config.Config.Port, nil)
 }
